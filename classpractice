@@ -1,0 +1,37 @@
+
+public class NameClassPractice {
+    public static void main(String[] args) {
+
+        System.out.printf("Hello and welcome!");
+        // with an empty arguments ("no args")
+        // Create a couple dog objects.
+        dog myDog = new dog();
+        dog anoherdog = new dog();
+
+        // Create a dog with a string name
+        dog aDog = new dog( "spot");
+
+        // Output the new object's name
+        System.out.println("\n the new dog's name is: " + aDog.getName());
+
+        // create a foruth dog wit an int age.
+        dog fourthdog = new dog( 33);
+
+        // Output the dog's age
+        System.out.println("\n my new dog's age is: " + fourthdog.getAge());
+
+        // And fianlly create a ffith and last dog.
+        dog Fifthdog = new dog( "my new dog name", 7);
+
+        // validate it
+        System.out.println(" my last dog's name is " + Fifthdog.getName() + "and age is" + Fifthdog.getName());
+        
+        // Give our dog a birthday (add a year a its age)
+        Fifthdog.setAge(Fifthdog.getAge() + 1);
+        // validate it.
+        System.out.println("\n my dog, who is named " + Fifthdog.getName() + ", had a bithday and age is mow: " + Fifthdog.getAge());
+        
+        
+
+    }
+}
