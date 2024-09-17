@@ -1,0 +1,28 @@
+public class dog {
+    // Create Two Fields for dog objects.
+
+    private String name;
+    private int age;
+
+
+    // create getters and setters for our fields.
+
+    // create getter amd setter for name
+    public void setName(String name) {
+        this.name =name;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    // create getter amd setter for age.
+    public int getAge () {
+        return this.age;
+        // this would work as well because there is no ambiguity
+        // return age;
+    }
+    public void setAge(int age) {
+        this.age = age;
+    }
+
