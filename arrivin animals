@@ -1,0 +1,121 @@
+// Anthony Silva
+// 9/19/2024
+// Driver File for this animal class setup
+
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.BufferedReader;
+
+
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("\n Welcome to my zoo program");
+
+        // Open the arriving file.
+        try {
+            BufferedReader bufferedReader = new BufferedReader(new FileReader("C:\\Users\\BE218\\arrivingAnimals.txt "));
+            String myLine;
+
+
+        // read the file one line at a time
+        while ((myLine = bufferedReader.readLine()) != null) {
+            System.out.println(myLine);
+        }
+
+    } catch (IOException e) {
+        throw new RuntimeException();
+    }
+        // create an animal object
+        Animal myAnimalObject = new Animal();
+
+        myAnimalObject.setAge(0);
+
+        // user your new animal object.
+        System.out.println("\n My Animals age is: " + myAnimalObject.getAge() + " years old ");
+
+        // Create a Hyena object
+        Hyena myNewHyena = new Hyena();
+
+        myNewHyena.setAge(7);
+
+        // output the age of our hyena
+        System.out.println("\n the age of our hyena is " + myNewHyena.getAge() + " years old ");
+
+        // create a lion object
+        Lion myLion = new Lion();
+
+        // Make the Lion 12 years old
+        myLion.setAge(12);
+
+        // Output our lions age.
+        System.out.println("\n our Lion is " + myLion.getAge() + " years old ");
+
+        // output the number of animals.
+        System.out.println("\n The number of animals created is " + Animal.numOFAnimals);
+
+
+
+
+    }
+}
+
+animal class
+
+public class Animal {
+    // Create a static int that keep track of the number  of aniamls created
+    static int numOFAnimals = 0;
+
+    // create a constructor for our new Animal class
+    public Animal() {
+        numOFAnimals++;
+    }
+
+
+
+    // Create a few attributes (fields)
+    // Sex will be 'male' or 'female'
+   private String sex = "";
+    // age will be in years
+    private int age = 0;
+    // and weight will be in pounds
+    private int weight = 0;
+
+    // create getters and setters
+
+    public int getAge() {
+        return age;
+
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public String getSex() {
+        return sex;
+    }
+
+    public void setSex(String sex) {
+        this.sex = sex;
+    }
+
+    public int getWeight() {
+        return weight;
+    }
+
+    public void setWeight(int weight) {
+        this.weight = weight;
+    }
+}
+
+hyena class
+
+public class Hyena extends Animal   {
+
+}
+
+lion class
+
+public class Lion extends Animal    {
+    // We are in the
+}
